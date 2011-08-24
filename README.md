@@ -6,7 +6,7 @@
 * Vast standard library
 * RubyGems, the easiest and best way to manage add-on libraries
 
-### Rails 3.10
+### Rails 3.1
 * Emphasis on rapid prototyping and development cycle
 * Separation of logic using the Model-View-Controller pattern
 * "Convention over Configuration"
