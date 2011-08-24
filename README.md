@@ -7,10 +7,11 @@
 * RubyGems, the easiest and best way to manage add-on libraries
 
 ### Rails 3.10
-* Emphasis on rapid development cycle
+* Emphasis on rapid prototyping and development cycle
 * Separation of logic using the Model-View-Controller pattern
 * "Convention over Configuration"
 * Test Driven Development using RSpec
+* Uses git, not subversion as a standard
 
 ### Heroku
 * http://heroku.com
@@ -36,10 +37,16 @@
     git push origin master
 
 ### Sass
-* http://sass-lang.com to download
+* http://sass-lang.com
+* `gem install sass`
 * Run the observer script in the background. Use `sass --watch myfile.scss:myfile.css`
 
-## EventBooking
+## RefineryCMS and EventBooking
+* http://refinerycms.com
+* easy CMS to learn
+* extendible and customizable using "engines"
+* stacks on top of a normal Rails app without being obtrusive, adheres to "The Rails Way"
+
 ### The Events Engine
 The events engine is just begging to be hacked.  Here's what I did for Montego Bay:
 
@@ -58,7 +65,7 @@ The events engine is just begging to be hacked.  Here's what I did for Montego B
 
 2. run `rake db:migrate` to update your table
 3. run `rake refinery:override model=Event` and add the line `validates_uniqueness_of :unique_event_id` to app/models/event.rb
-4. Here's where the fun begins.  Write a script to pull in data from the Eventbooking XML streams and write it to the Events table. This was my first draft
+4. Here's where the fun begins.  Set up a Cron add-on in your Heroku app. Then write a script to pull in data from the Eventbooking XML streams and write it to the Events table. Save it to lib/tasks/cron.rake and run it manually with `rake cron` (or `heroku run rake cron` to test it). This was my first draft
 
         desc 'this task populates our event table from eb-xml streams'
         task :cron => :environment do
@@ -89,8 +96,11 @@ The events engine is just begging to be hacked.  Here's what I did for Montego B
 
 
 ### The CopyWriting Engine
-Adding the copywriting engine to your app will let users control snippets of text in your page.
-
+Adding the copywriting engine to your app will let users control snippets of text in your page. Here's an example of copywriting code I embedded in the footer, which was scanned and added to the backend admin automatically.
+        <li>
+          Phone: <%= copywriting('phone number', { :scope => 'footer', :default => '1.800.867.5309' }) %>
+        </li>
+Pretty easy huh!?
 
 ## An aside
 My favorite editor is vi, but vi kinda sucks on windows so I instead use Sublime Text 2.  Coupled with Git Bash and Command Prompt, it is possible to develop Rails applications on Windows and still have a nice envrionment.
