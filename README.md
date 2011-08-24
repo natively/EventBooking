@@ -46,6 +46,7 @@
 * easy CMS to learn
 * extendible and customizable using "engines"
 * stacks on top of a normal Rails app without being obtrusive, adheres to "The Rails Way"
+* see http://refinerycms.com/guides for tutorials on adding engines to your app
 
 ### The Events Engine
 The events engine is just begging to be hacked.  Here's what I did for Montego Bay:
