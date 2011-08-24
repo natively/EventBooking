@@ -93,4 +93,4 @@ Adding the copywriting engine to your app will let users control snippets of tex
 
 
 ## An aside
-My favorite editor is vi, but vi kinda sucks on windows so I instead use Sublime Text 2.  Coupled with Git Bash and Command Prompt, you can develop Rails applications on Windows and still have a nice envrionment.
+My favorite editor is vi, but vi kinda sucks on windows so I instead use Sublime Text 2.  Coupled with Git Bash and Command Prompt, it is possible to develop Rails applications on Windows and still have a nice envrionment.
