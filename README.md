@@ -42,8 +42,8 @@
 ## EventBooking
 ### The Events Engine
 The events engine is just begging to be hacked.  Here's what I did for Montego Bay:
-1. Add a migration to the Events table that adds a unique_event_id field. It might look like this:
 
+1. Add a migration to the Events table that adds a unique_event_id field. It might look like this:
     class AddUniqueEventIdToEvents < ActiveRecord::Migration
       def self.up
         add_column :events, :unique_event_id, :integer
@@ -54,7 +54,6 @@ The events engine is just begging to be hacked.  Here's what I did for Montego B
         remove_column :events, :unique_event_id
       end
     end
-
 2. run `rake db:migrate` to update your table
 3. run `rake refinery:override model=Event` and add the line `validates_uniqueness_of :unique_event_id` to app/models/event.rb
 4. Here's where the fun begins.  Write a script to pull in data from the Eventbooking XML streams and write it to the Events table. This was my first draft
