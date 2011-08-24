@@ -60,15 +60,13 @@ The events engine is just begging to be hacked.  Here's what I did for Montego B
 4. Here's where the fun begins.  Write a script to pull in data from the Eventbooking XML streams and write it to the Events table. This was my first draft
 
     desc 'this task populates our event table from eb-xml streams'
-
     task :cron => :environment do
       require 'nokogiri'
       require 'open-uri'
-
       # make this the url of your EventListXML stream
       url = "http://go-xml.smgbooking.com/EventListXml.ashx?wl=3.7FEDB662"
-      
       Nokogiri::XML(open(url)).xpath("//event").each do |e|
+        
         puts "Creating " + (e>"event_name").text + "..."
 
         # get the date (for readability)
