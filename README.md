@@ -97,9 +97,11 @@ The events engine is just begging to be hacked.  Here's what I did for Montego B
 
 ### The CopyWriting Engine
 Adding the copywriting engine to your app will let users control snippets of text in your page. Here's an example of copywriting code I embedded in the footer, which was scanned and added to the backend admin automatically.
-        <li>
-          Phone: <%= copywriting('phone number', { :scope => 'footer', :default => '1.800.867.5309' }) %>
-        </li>
+
+    <li>
+      Phone: <%= copywriting('phone number', { :scope => 'footer', :default => '1.800.867.5309' }) %>
+    </li>
+
 Pretty easy huh!?
 
 ## An aside
