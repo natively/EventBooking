@@ -30,8 +30,8 @@ Isn't Rails fantastic?
 
 ### Let's Get Destructive ###
 I hope you backed up your database. Type
-      > Event.destroy_all # to kill all your events
-      > my_event.destroy # to kill a specific event
+        > Event.destroy_all # to kill all your events
+        > my_event.destroy # to kill a specific event
 
 ### Useful Links ###
 * http://www.ruby-doc.org/
