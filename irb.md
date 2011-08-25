@@ -19,13 +19,21 @@ y is short for yaml (the cutest markup lanquage, sorry markdown). Think of it li
 ### Let's Get Creative ###
 Let's keep going with this Event model thing. Some of our data fields might be `:title`, or a datetime `start_at`.
 We can manually create an event by typing
+
     > my_birthday = Event.new( :title => 'Alex\'s Birthday', :starts_at => 'April 29, 1988, 11:45PM' )
+
 let's check out `my_birthday`
+
     > y my_birthday
+
 Neat! Let's save it to our database.
+
     > my_birthday.save
+
 Easy enough. You can save a step by using the `create` method instead
+
     > Event.create( :title => 'Alex\'s Birthday', :starts_at => 'April 29, 1988, 11:45PM' )
+
 Isn't rails fantastic?
 
 ### Let's Get Destructive ###
