@@ -1,6 +1,6 @@
 # Using your Rails Console #
 
-These are some beginner tips that might help you get started with irb and the ails console.
+These are some beginner tips that might help you get started with irb and the Rails console.
 
 ### Getting Started ###
 1. Open you command prompt and `cd path/to/my/app`
